@@ -5,7 +5,7 @@ public:
         vector<int> result;
         for(int i = 0; i < nums.size(); i++) {
             int complement = target - nums[i];
-            if(index.count(complement)) {
+            if(index.contains(complement)) {
                 result.push_back(index[complement]);
                 result.push_back(i);
                 break;
