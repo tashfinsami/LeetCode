@@ -1,6 +1,6 @@
 # LeetCode
 LeedCode problems to master DSA!
-## Additional Platform
+## Additional Platforms
 [Codeforces](https://codeforces.com/profile/Tashfin)
 
 
