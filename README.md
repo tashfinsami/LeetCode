@@ -1,7 +1,7 @@
 # LeetCode
 LeedCode problems to master DSA!
 ## Additional Platform
-- Codeforces: [View Solved Problems](https://codeforces.com/submissions/Tashfin)
+Codeforces: [View Solved Problems](https://codeforces.com/submissions/Tashfin)
 
 
 <!---LeetCode Topics Start-->
