@@ -1,2 +1,2 @@
 # LeetCode
-LeedCode problems to master DSA
+LeedCode problems to master DSA!
