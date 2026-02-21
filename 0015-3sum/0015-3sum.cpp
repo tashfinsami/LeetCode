@@ -14,7 +14,7 @@ public:
                     vector<int> temp;
                     temp.push_back(nums[i]); temp.push_back(nums[l]); temp.push_back(nums[r]);
                     if(res.empty() || res.back() != temp) res.push_back(temp);
-                    l++;
+                    r--;
                 }
             }
         }
