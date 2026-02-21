@@ -10,6 +10,7 @@ LeedCode problems to master DSA!
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/tashfinsami/LeetCode/tree/master/0001-two-sum) |
+| [0015-3sum](https://github.com/tashfinsami/LeetCode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/tashfinsami/LeetCode/tree/master/0049-group-anagrams) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tashfinsami/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0215-kth-largest-element-in-an-array](https://github.com/tashfinsami/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
@@ -26,6 +27,7 @@ LeedCode problems to master DSA!
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/tashfinsami/LeetCode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/tashfinsami/LeetCode/tree/master/0049-group-anagrams) |
 | [0215-kth-largest-element-in-an-array](https://github.com/tashfinsami/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0217-contains-duplicate](https://github.com/tashfinsami/LeetCode/tree/master/0217-contains-duplicate) |
@@ -63,6 +65,7 @@ LeedCode problems to master DSA!
 ## Two Pointers
 |  |
 | ------- |
+| [0015-3sum](https://github.com/tashfinsami/LeetCode/tree/master/0015-3sum) |
 | [0125-valid-palindrome](https://github.com/tashfinsami/LeetCode/tree/master/0125-valid-palindrome) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tashfinsami/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 ## Binary Search
