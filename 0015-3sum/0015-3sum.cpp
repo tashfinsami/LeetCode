@@ -17,6 +17,7 @@ public:
                     l++;
                     r--;
                     while(l < r && nums[l] == nums[l - 1]) l++;
+                    while(r > l && nums[r] == nums[r + 1]) r--;
                 }
             }
         }
