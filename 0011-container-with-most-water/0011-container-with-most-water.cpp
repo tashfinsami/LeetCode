@@ -8,7 +8,8 @@ public:
             int area = min(heights[r], heights[l]) * w--;
             max_area = max(max_area, area);
             if(heights[r] > heights[l]) l++;
-            else r--;
+            else if(heights[l] > heights[r]) r--;
+            else l++;
         }
         return max_area;
     }
