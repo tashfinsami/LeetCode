@@ -9,7 +9,7 @@ public:
             max_area = max(max_area, area);
             if(heights[r] > heights[l]) l++;
             else if(heights[l] > heights[r]) r--;
-            else l++;
+            else r--;
         }
         return max_area;
     }
