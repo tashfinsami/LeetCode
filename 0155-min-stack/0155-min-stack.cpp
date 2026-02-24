@@ -18,14 +18,21 @@ public:
     }
     
     int getMin() {
-        stack<int> temp = buffer;
-        int mini = temp.top();
-        temp.pop();
+        stack<int> temp;
+        int min_val = buffer.top();
+        temp.push(buffer.top());
+        buffer.pop();
+
+        while(!buffer.empty()) {
+            min_val = min(min_val, buffer.top());
+            temp.push(buffer.top());
+            buffer.pop();
+        }
         while(!temp.empty()) {
-            mini = min(mini, temp.top());
+            buffer.push(temp.top());
             temp.pop();
         }
-        return mini;
+        return min_val;
     }
 };
 
