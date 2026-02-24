@@ -19,15 +19,16 @@ public:
     
     int getMin() {
         stack<int> temp = buffer;
-        int min = temp.top();
+        int mini = temp.top();
         temp.pop();
         while(!temp.empty()) {
-            if(temp.top() < min) min = temp.top();
+            mini = min(mini, temp.top());
             temp.pop();
         }
-        return min;
+        return mini;
     }
 };
+
 
 /**
  * Your MinStack object will be instantiated and called as such:
