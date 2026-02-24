@@ -14,6 +14,7 @@ LeedCode problems to master DSA!
 | [0015-3sum](https://github.com/tashfinsami/LeetCode/tree/master/0015-3sum) |
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0049-group-anagrams](https://github.com/tashfinsami/LeetCode/tree/master/0049-group-anagrams) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/tashfinsami/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tashfinsami/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0215-kth-largest-element-in-an-array](https://github.com/tashfinsami/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0217-contains-duplicate](https://github.com/tashfinsami/LeetCode/tree/master/0217-contains-duplicate) |
@@ -90,6 +91,7 @@ LeedCode problems to master DSA!
 | ------- |
 | [0020-valid-parentheses](https://github.com/tashfinsami/LeetCode/tree/master/0020-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/tashfinsami/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/tashfinsami/LeetCode/tree/master/0155-min-stack) |
 ## Monotonic Stack
 |  |
@@ -99,4 +101,8 @@ LeedCode problems to master DSA!
 |  |
 | ------- |
 | [0155-min-stack](https://github.com/tashfinsami/LeetCode/tree/master/0155-min-stack) |
+## Math
+|  |
+| ------- |
+| [0150-evaluate-reverse-polish-notation](https://github.com/tashfinsami/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 <!---LeetCode Topics End-->
