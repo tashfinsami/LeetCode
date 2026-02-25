@@ -1,38 +1,28 @@
 class MinStack {
 public:
-    stack<int> buffer;
+    stack<int> stk;
+    stack<int> min_stk;
     MinStack() {
         
     }
     
     void push(int val) {
-        buffer.push(val);
+        stk.push(val);
+        if(min_stk.empty() || val <= min_stk.top()) min_stk.push(val);
     }
     
     void pop() {
-        buffer.pop();
+        if(min_stk.top() == stk.top()) min_stk.pop();
+        stk.pop();
+
     }
 
     int top() {
-        return buffer.top();
+        return stk.top();
     }
     
     int getMin() {
-        stack<int> temp;
-        int min_val = buffer.top();
-        temp.push(buffer.top());
-        buffer.pop();
-
-        while(!buffer.empty()) {
-            min_val = min(min_val, buffer.top());
-            temp.push(buffer.top());
-            buffer.pop();
-        }
-        while(!temp.empty()) {
-            buffer.push(temp.top());
-            temp.pop();
-        }
-        return min_val;
+        return min_stk.top();
     }
 };
 
