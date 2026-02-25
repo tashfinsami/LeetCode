@@ -19,6 +19,7 @@ LeedCode problems to master DSA!
 | [0215-kth-largest-element-in-an-array](https://github.com/tashfinsami/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0217-contains-duplicate](https://github.com/tashfinsami/LeetCode/tree/master/0217-contains-duplicate) |
 | [0347-top-k-frequent-elements](https://github.com/tashfinsami/LeetCode/tree/master/0347-top-k-frequent-elements) |
+| [0739-daily-temperatures](https://github.com/tashfinsami/LeetCode/tree/master/0739-daily-temperatures) |
 ## Hash Table
 |  |
 | ------- |
@@ -93,10 +94,12 @@ LeedCode problems to master DSA!
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tashfinsami/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/tashfinsami/LeetCode/tree/master/0155-min-stack) |
+| [0739-daily-temperatures](https://github.com/tashfinsami/LeetCode/tree/master/0739-daily-temperatures) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0739-daily-temperatures](https://github.com/tashfinsami/LeetCode/tree/master/0739-daily-temperatures) |
 ## Design
 |  |
 | ------- |
