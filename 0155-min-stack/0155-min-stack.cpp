@@ -8,12 +8,12 @@ public:
     
     void push(int val) {
         stk.push(val);
-        min_stk.push(min(val, min_stk.empty() ? val : min_stk.top()));
+        if(min_stk.empty() || val <= min_stk.top()) min_stk.push(val);
     }
     
     void pop() {
+        if(min_stk.top() == stk.top()) min_stk.pop();
         stk.pop();
-        min_stk.pop();
 
     }
 
