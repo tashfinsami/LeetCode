@@ -7,12 +7,17 @@ public:
             rec[i].second = speed[i];
         }
         sort(rec.rbegin(), rec.rend());
-        stack<double> counter;
-        for(int i = 0; i < position.size(); i++) {
-            double time = (target - rec[i].first) / (double)rec[i].second; 
-            if(!counter.empty() && time <= counter.top()) continue;
-            else counter.push(time);
+        int count = 1;
+        double time_prev = (target - rec[0].first) / (double)rec[0].second;
+        for(int i = 1; i < position.size(); i++) {
+            double time_cur = (target - rec[i].first) / (double)rec[i].second;
+            bool flag = false;
+            if(time_cur <= time_prev) continue;
+            else {
+                count++;
+                time_prev = time_cur;
+            }
         }
-        return counter.size();
+        return count;
     }
 };
