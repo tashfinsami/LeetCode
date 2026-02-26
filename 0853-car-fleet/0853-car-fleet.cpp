@@ -7,12 +7,12 @@ public:
             rec[i].second = speed[i];
         }
         sort(rec.rbegin(), rec.rend());
-        stack<double> buffer;
+        stack<double> counter;
         for(int i = 0; i < position.size(); i++) {
             double time = (target - rec[i].first) / (double)rec[i].second; 
-            if(!buffer.empty() && time <= buffer.top()) continue;
-            else buffer.push(time);
+            if(!counter.empty() && time <= counter.top()) continue;
+            else counter.push(time);
         }
-        return buffer.size();
+        return counter.size();
     }
 };
