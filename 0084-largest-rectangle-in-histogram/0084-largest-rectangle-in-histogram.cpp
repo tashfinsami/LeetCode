@@ -9,7 +9,7 @@ public:
                 left_vec[i] = i;
                 left_stk.push(i);
             }
-            else if(heights[i] < heights[left_stk.top()]) {
+            else if(heights[i] <= heights[left_stk.top()]) {
                 while(!left_stk.empty() && heights[i] <= heights[left_stk.top()]) {
                     left_vec[i] = left_vec[left_stk.top()];
                     left_stk.pop();
@@ -17,7 +17,7 @@ public:
                 left_stk.push(i);
 
             }
-            else if(heights[i] == heights[left_stk.top()]) left_vec[i] = left_vec[left_stk.top()];
+            //else if(heights[i] == heights[left_stk.top()]) left_vec[i] = left_vec[left_stk.top()];
         }
 
         vector<int> right_vec(heights.size());
@@ -28,7 +28,7 @@ public:
                 right_vec[i] = i;
                 right_stk.push(i);
             }
-            else if(heights[i] < heights[right_stk.top()]) {
+            else if(heights[i] <= heights[right_stk.top()]) {
                 while(!right_stk.empty() && heights[i] <= heights[right_stk.top()]) {
                     right_vec[i] = right_vec[right_stk.top()];
                     right_stk.pop();
@@ -36,7 +36,7 @@ public:
                 right_stk.push(i);
 
             }
-            else if(heights[i] == heights[right_stk.top()]) right_vec[i] = right_vec[right_stk.top()];
+            //else if(heights[i] == heights[right_stk.top()]) right_vec[i] = right_vec[right_stk.top()];
         }
 
         int area_max = 0;
