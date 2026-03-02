@@ -1,46 +1,33 @@
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {
-        vector<int> left_vec(heights.size());
-        stack<int> left_stk;
-
-        for(int i = 0; i < heights.size(); i++) {
-            if(left_stk.empty() || heights[i] > heights[left_stk.top()]){
-                left_vec[i] = i;
-                left_stk.push(i);
-            }
-            else if(heights[i] < heights[left_stk.top()]) {
-                while(!left_stk.empty() && heights[i] <= heights[left_stk.top()]) {
-                    left_vec[i] = left_vec[left_stk.top()];
-                    left_stk.pop();
+        int n = heights.size();
+        vector<int> left_vec(n, -1);
+        vector<int> right_vec(n, n);
+        stack<int> stk;
+        for(int i = 0; i < n; i++) {
+            if(!stk.empty() && heights[i] <= heights[stk.top()]) {
+                while(!stk.empty() && heights[i] <= heights[stk.top()]) {
+                    stk.pop();
                 }
-                left_stk.push(i);
-
             }
-            else if(heights[i] == heights[left_stk.top()]) left_vec[i] = left_vec[left_stk.top()];
+            if(!stk.empty()) left_vec[i] = stk.top();
+            stk.push(i);
         }
-
-        vector<int> right_vec(heights.size());
-        stack<int> right_stk;
-        
-        for(int i = heights.size() - 1; i >= 0; i--) {
-            if(right_stk.empty() || heights[i] > heights[right_stk.top()]){
-                right_vec[i] = i;
-                right_stk.push(i);
-            }
-            else if(heights[i] < heights[right_stk.top()]) {
-                while(!right_stk.empty() && heights[i] <= heights[right_stk.top()]) {
-                    right_vec[i] = right_vec[right_stk.top()];
-                    right_stk.pop();
+        while(!stk.empty()) stk.pop();
+        for(int i = n - 1; i >= 0; i--) {
+            if(!stk.empty() && heights[i] <= heights[stk.top()]) {
+                while(!stk.empty() && heights[i] <= heights[stk.top()]) {
+                    stk.pop();
                 }
-                right_stk.push(i);
-
             }
-            else if(heights[i] == heights[right_stk.top()]) right_vec[i] = right_vec[right_stk.top()];
+            if(!stk.empty()) right_vec[i] = stk.top();
+            stk.push(i);
         }
-
         int area_max = 0;
-        for(int i = 0; i < heights.size(); i++) {
+        for(int i = 0; i < n; i++) {
+            left_vec[i]++;
+            right_vec[i]--;
             int area = heights[i] * (right_vec[i] - left_vec[i] + 1);
             area_max = max(area_max, area);
         }
