@@ -6,20 +6,16 @@ public:
         vector<int> right_vec(n, n);
         stack<int> stk;
         for(int i = 0; i < n; i++) {
-            if(!stk.empty() && heights[i] <= heights[stk.top()]) {
-                while(!stk.empty() && heights[i] <= heights[stk.top()]) {
-                    stk.pop();
-                }
+            while(!stk.empty() && heights[i] <= heights[stk.top()]) {
+                stk.pop();
             }
             if(!stk.empty()) left_vec[i] = stk.top();
             stk.push(i);
         }
         while(!stk.empty()) stk.pop();
         for(int i = n - 1; i >= 0; i--) {
-            if(!stk.empty() && heights[i] <= heights[stk.top()]) {
-                while(!stk.empty() && heights[i] <= heights[stk.top()]) {
-                    stk.pop();
-                }
+            while(!stk.empty() && heights[i] <= heights[stk.top()]) {
+                stk.pop();
             }
             if(!stk.empty()) right_vec[i] = stk.top();
             stk.push(i);
