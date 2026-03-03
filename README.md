@@ -15,6 +15,7 @@ LeedCode problems to master DSA!
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0049-group-anagrams](https://github.com/tashfinsami/LeetCode/tree/master/0049-group-anagrams) |
 | [0084-largest-rectangle-in-histogram](https://github.com/tashfinsami/LeetCode/tree/master/0084-largest-rectangle-in-histogram) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/tashfinsami/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tashfinsami/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tashfinsami/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0215-kth-largest-element-in-an-array](https://github.com/tashfinsami/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
@@ -90,6 +91,7 @@ LeedCode problems to master DSA!
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/tashfinsami/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 ## Stack
 |  |
 | ------- |
