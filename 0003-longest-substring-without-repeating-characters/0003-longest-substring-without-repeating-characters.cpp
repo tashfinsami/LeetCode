@@ -7,8 +7,7 @@ public:
             for(int i = l; i < r; i++) {
                 if(s[i] == s[r]) {
                     count = max(count, r - 1 - l + 1);
-                    l++;
-                    r = i;
+                    l = i + 1;
                     break;
                 }
             }
