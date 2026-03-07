@@ -1,20 +1,19 @@
 class Solution {
 public:
     int characterReplacement(string s, int k) {
-        unordered_set<char> char_set(s.begin(), s.end());
+        unordered_map<char, int> freq;
+        int max_freq = 0;
         int res = 0;
-        for(char c : char_set) {
-            int count = 0;
-            int l = 0, r = 0;
-            while(r < s.size()) {
-                if(s[r] == c) count++;
-                while(r - l + 1 > count + k) {
-                    if(s[l] == c) count--;
-                    l++;
-                }
-                res = max(res, r - l + 1);
-                r++;
+        int l = 0, r = 0;
+        while(r < s.size()) {
+            freq[s[r]]++;
+            max_freq = max(max_freq, freq[s[r]]);
+            if(r - l + 1 - (max_freq + k) == 1) {
+                freq[s[l]]--;
+                l++;
             }
+            res = max(res, r - l + 1);
+            r++;
         }
         return res;
     }
