@@ -8,7 +8,7 @@ public:
         while(r < s.size()) {
             freq[s[r]]++;
             max_freq = max(max_freq, freq[s[r]]);
-            if(r - l + 1 > max_freq + k) {
+            if(r - l + 1 - max_freq - k == 1) {
                 freq[s[l]]--;
                 l++;
             }
