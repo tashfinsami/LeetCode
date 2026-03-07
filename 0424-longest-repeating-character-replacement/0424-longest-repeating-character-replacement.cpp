@@ -8,7 +8,7 @@ public:
             int l = 0, r = 0;
             while(r < s.size()) {
                 if(s[r] == c) count++;
-                while(r - l + 1 > count + k) {
+                if(r - l + 1 > count + k) {
                     if(s[l] == c) count--;
                     l++;
                 }
