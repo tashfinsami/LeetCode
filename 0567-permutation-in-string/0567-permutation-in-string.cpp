@@ -4,7 +4,7 @@ public:
         vector<int> freq(26, 0);
         for(int i = l; i <= r; i++) freq[s[i] - 'a']++;
         string key = to_string(freq[0]);
-        for(int i = 1; i < 26; i++) key += '+' + to_string(freq[i]);
+        for(int i = 1; i < 26; i++) key += '-' + to_string(freq[i]);
         return key;
     }
     bool checkInclusion(string s1, string s2) {
