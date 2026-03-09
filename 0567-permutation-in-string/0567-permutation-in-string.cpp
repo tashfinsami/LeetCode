@@ -12,10 +12,8 @@ public:
         string k1 = makeKey(s1, 0, s1.size() - 1);
         int l = 0, r = s1.size() - 1;
         while(r < s2.size()) {
-            string k2 = makeKey(s2, l, r);
+            string k2 = makeKey(s2, l++, r++);
             if(k2 == k1) return true;
-            l++;
-            r++;
         }
         return false;
     }
