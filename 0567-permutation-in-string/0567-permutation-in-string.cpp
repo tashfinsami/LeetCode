@@ -20,11 +20,11 @@ public:
                 f2[s2[r + 1] - 'a']++;
                 if(f2[s2[r + 1] - 'a'] == f1[s2[r + 1] - 'a']) matches++;
                 else if(f2[s2[r + 1] - 'a'] == f1[s2[r + 1] - 'a'] + 1) matches--;
-            }
 
             f2[s2[l] - 'a']--;
             if(f2[s2[l] - 'a'] == f1[s2[l] - 'a']) matches++;
             else if(f2[s2[l] - 'a'] == f1[s2[l] - 'a'] - 1) matches--;
+            }
 
             l++;
             r++;
