@@ -10,8 +10,8 @@ public:
         while(r < s.size()) {
             if(!freq_t[s[l]]) {
                 while(!freq_t[s[l]] && l < s.size()) l++;
-                if(l >= s.size()) break;
-                //r = max(r, l);
+                //if(l >= s.size()) break;
+                r = max(r, l);
             }
             freq_s[s[r]]++;
             if(freq_s[s[r]] <= freq_t[s[r]]) matches++;
