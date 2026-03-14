@@ -7,7 +7,7 @@ public:
         int matches = 0;
         vector<int> min_len(2, -1);
         int l = 0, r = 0;
-        while(r < s.size() && l < s.size()) {
+        while(r < s.size()) {
             if(!freq_t[s[l]]) {
                 while(!freq_t[s[l]] && l < s.size()) l++;
                 if(l >= s.size()) break;
@@ -24,19 +24,7 @@ public:
                 if(freq_s[s[l]] < freq_t[s[l]]) matches--;
                 int temp = l;
                 l++;
-                /*while(1) {
-                    if(s[l] != s[temp]) {
-                        l = max(l - 1, temp + 1); 
-                        break;
-                    }
-                    if(freq_s[s[l]] < freq_t[s[l]]) { 
-                        l = max(l - 1, temp + 1); 
-                        break;
-                    }
-                    freq_s[s[l]]--;
-                    min_len[0] = l;
-                    l++;
-                }*/
+
                 freq_s[s[r]]--;
                 if(freq_s[s[r]] < freq_t[s[r]]) matches--;
                 r--;
