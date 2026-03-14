@@ -8,10 +8,8 @@ public:
         vector<int> min_len(2, -1);
         int l = 0, r = 0;
         while(r < s.size()) {
-            if(!freq_t[s[l]]) {
-                while(!freq_t[s[l]] && l + 1 < s.size()) l++;
-                r = max(r, l);
-            }
+            while(!freq_t[s[l]] && l + 1 < s.size()) l++;
+            r = max(r, l);
             freq_s[s[r]]++;
             if(freq_s[s[r]] <= freq_t[s[r]]) matches++;
             if(matches == t.size()) {
