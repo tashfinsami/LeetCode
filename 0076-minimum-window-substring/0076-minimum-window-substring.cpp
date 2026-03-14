@@ -9,8 +9,7 @@ public:
         int l = 0, r = 0;
         while(r < s.size()) {
             if(!freq_t[s[l]]) {
-                while(!freq_t[s[l]] && l < s.size()) l++;
-                if(l >= s.size()) break;
+                while(!freq_t[s[l]] && l + 1 < s.size()) l++;
                 r = max(r, l);
             }
             freq_s[s[r]]++;
