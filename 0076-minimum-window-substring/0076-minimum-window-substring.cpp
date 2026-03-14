@@ -1,7 +1,7 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-        if(!t.size() || !s.size()) return "";
+        if(!t.size() || !s.size() || t.size() > s.size()) return "";
         unordered_map<char, int> freq_t;
         for(char c : t) freq_t[c]++;
         unordered_map<char, int> freq_s;
@@ -9,6 +9,8 @@ public:
         vector<int> min_len(2, -1);
         int l = 0, r = 0;
         while(r < s.size()) {
+            if(!freq_t[s[l]]) l++;
+            r = max(r, l);
             freq_s[s[r]]++;
             if(freq_s[s[r]] <= freq_t[s[r]]) matches++;
             while(matches == t.size()) {
