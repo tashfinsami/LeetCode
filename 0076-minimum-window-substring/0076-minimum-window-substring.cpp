@@ -27,7 +27,7 @@ public:
             r++;
         }
         string res;
-        if(min_len.first != -1) for(int i = min_len.first; i <= min_len.second; i++) res += s[i];
+        if(len < INT_MAX) for(int i = min_len.first; i <= min_len.second; i++) res += s[i];
         return res;
     }
 };
