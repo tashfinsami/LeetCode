@@ -1,6 +1,7 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
+        if(!t.size() || !s.size()) return "";
         unordered_map<char, int> freq_t;
         for(char c : t) freq_t[c]++;
         unordered_map<char, int> freq_s;
@@ -12,19 +13,14 @@ public:
             r = max(r, l);
             freq_s[s[r]]++;
             if(freq_s[s[r]] <= freq_t[s[r]]) matches++;
-            if(matches == t.size()) {
+            while(matches == t.size()) {
                 if(min_len[0] == -1 || r - l < min_len[1] - min_len[0]) {
                     min_len[0] = l;
                     min_len[1] = r;
                 }
                 freq_s[s[l]]--;
                 if(freq_s[s[l]] < freq_t[s[l]]) matches--;
-                int temp = l;
                 l++;
-
-                freq_s[s[r]]--;
-                if(freq_s[s[r]] < freq_t[s[r]]) matches--;
-                r--;
             }
             r++;
         }
