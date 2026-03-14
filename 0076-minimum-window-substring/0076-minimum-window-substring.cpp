@@ -4,7 +4,6 @@ public:
         if(!t.size() || !s.size() || t.size() > s.size()) return "";
         unordered_map<char, int> freq_t;
         for(char c : t) freq_t[c]++;
-        int char_count = freq_t.size();
         unordered_map<char, int> freq_s;
         int matches = 0;
         pair<int, int> min_len = {-1, -1};
@@ -13,8 +12,8 @@ public:
             if(!freq_t[s[l]]) l++;
             r = max(r, l);
             freq_s[s[r]]++;
-            if(freq_s[s[r]] == freq_t[s[r]]) matches++;
-            while(matches == char_count) {
+            if(freq_s[s[r]] <= freq_t[s[r]]) matches++;
+            while(matches == t.size()) {
                 if(min_len.first == -1 || r - l < min_len.second - min_len.first) {
                     min_len.first = l;
                     min_len.second = r;
