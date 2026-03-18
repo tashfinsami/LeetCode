@@ -21,6 +21,7 @@ LeedCode problems to master DSA!
 | [0215-kth-largest-element-in-an-array](https://github.com/tashfinsami/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0217-contains-duplicate](https://github.com/tashfinsami/LeetCode/tree/master/0217-contains-duplicate) |
 | [0347-top-k-frequent-elements](https://github.com/tashfinsami/LeetCode/tree/master/0347-top-k-frequent-elements) |
+| [0704-binary-search](https://github.com/tashfinsami/LeetCode/tree/master/0704-binary-search) |
 | [0739-daily-temperatures](https://github.com/tashfinsami/LeetCode/tree/master/0739-daily-temperatures) |
 | [0853-car-fleet](https://github.com/tashfinsami/LeetCode/tree/master/0853-car-fleet) |
 ## Hash Table
@@ -92,6 +93,7 @@ LeedCode problems to master DSA!
 |  |
 | ------- |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tashfinsami/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
+| [0704-binary-search](https://github.com/tashfinsami/LeetCode/tree/master/0704-binary-search) |
 ## Greedy
 |  |
 | ------- |
