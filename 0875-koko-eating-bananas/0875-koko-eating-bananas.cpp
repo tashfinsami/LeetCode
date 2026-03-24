@@ -7,12 +7,12 @@ public:
         int ans = -1;
         while(l <= r) {
             int k = l + (r - l) / 2;
-            int sum = 0;
+            long long time = 0;
             for(int num : piles) {
-                sum += ceil((double)num / k);
-                if(sum > h) break;
+                time += ceil((double)num / k);
+                if(time > h) break;
             }
-            if(sum > h) l = k + 1;
+            if(time > h) l = k + 1;
             else { 
                 ans = k;
                 r = k - 1;
