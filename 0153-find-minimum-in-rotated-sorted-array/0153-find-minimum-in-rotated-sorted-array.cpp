@@ -10,6 +10,6 @@ public:
             if(nums[m] >= nums[l]) l = m + 1;
             else r = m - 1;
         }
-        return nums[r + 1];
+        return 0;
     }
 };
