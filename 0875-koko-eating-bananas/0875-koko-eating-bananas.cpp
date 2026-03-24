@@ -9,7 +9,7 @@ public:
             int k = l + (r - l) / 2;
             long long time = 0;
             for(int num : piles) {
-                time += ceil((double)num / k);
+                time += ceil((double)num / k); //time += (num + k - 1) / k;
                 if(time > h) break;
             }
             if(time > h) l = k + 1;
