@@ -10,7 +10,7 @@ public:
             long long time = 0;
             for(int num : piles) {
                 time += ceil((double)num / k); //time += (num + k - 1) / k;
-                //if(time > h) break;
+                if(time > h) break;
             }
             if(time > h) l = k + 1;
             else { 
