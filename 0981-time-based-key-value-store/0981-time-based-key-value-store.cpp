@@ -19,7 +19,7 @@ public:
             index = m;
             if(data[m].second == timestamp) break;
             else if(data[m].second < timestamp) l = m + 1;
-            else r = m - 1;
+            else break;
         }
         return (data[index].second <= timestamp) ? data[index].first : data[index - 1].first;
     }
