@@ -5,18 +5,18 @@ public:
         vector<int> nums;
         int a = 0, b = 0;
         while(a < m && b < n) {
-            if(nums1[a] <= nums2[b]) {
+            //if(nums1[a] <= nums2[b]) {
                 while(a < m && b < n && nums1[a] <= nums2[b]) {
                     nums.push_back(nums1[a]);
                     a++;
                 }
-            }
-            else {
+            //}
+            //else {
                 while(a < m && b < n && nums2[b] <= nums1[a]) {
                     nums.push_back(nums2[b]);
                     b++;
                 }
-            }
+            //}
         }
         while(a < m) {
             nums.push_back(nums1[a]);
