@@ -6,12 +6,16 @@ public:
         int a = 0, b = 0;
         while(a < m && b < n) {
             if(nums1[a] <= nums2[b]) {
-                nums.push_back(nums1[a]);
-                a++;
+                while(a < m && b < n && nums1[a] <= nums2[b]) {
+                    nums.push_back(nums1[a]);
+                    a++;
+                }
             }
             else {
-                nums.push_back(nums2[b]);
-                b++;
+                while(a < m && b < n && nums2[b] <= nums1[a]) {
+                    nums.push_back(nums2[b]);
+                    b++;
+                }
             }
         }
         while(a < m) {
@@ -30,3 +34,7 @@ public:
         else return nums[len / 2];
     }
 };
+
+// 1 6     2 3 4 5
+
+
