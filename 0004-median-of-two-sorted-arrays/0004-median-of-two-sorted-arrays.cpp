@@ -14,7 +14,7 @@ public:
             int l = (check_arr1) ? a : b;
             int r = (check_arr1) ? size1 - 1 : size2 - 1;
             int target = (check_arr1) ? nums2[b] : nums1[a];
-            const vector<int>& temp = (check_arr1) ? nums1 : nums2;
+            vector<int>& temp = (check_arr1) ? nums1 : nums2;
             while(l <= r) {
                 int m = l + (r - l) / 2;
                 if(temp[m] > target) r = m - 1;
