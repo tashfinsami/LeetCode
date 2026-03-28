@@ -8,19 +8,12 @@ public:
         bool done = false;
         int a = 0, b = 0;
         while(a < size1 && b < size2) {
-            int l, r, target;
-            bool check_arr1 = false;
-            if(nums1[a] <= nums2[b]) {
-                target = nums2[b];
-                l = a;
-                r = size1 - 1;
-                check_arr1 = true;
-            }
-            else {
-                target = nums1[a];
-                l = b;
-                r = size2 - 1;
-            }
+            bool check_arr1;
+            if(nums1[a] <= nums2[b]) check_arr1 = true;
+            else check_arr1 = false;
+            int l = (check_arr1) ? a : b;
+            int r = (check_arr1) ? size1 - 1 : size2 - 1;
+            int target = (check_arr1) ? nums2[b] : nums1[a];
             vector<int>& temp = (check_arr1) ? nums1 : nums2;
             while(l <= r) {
                 int m = l + (r - l) / 2;
