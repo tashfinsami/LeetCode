@@ -10,7 +10,7 @@ public:
         int a = 0, b = 0;
         while(a < size1 && b < size2) {
             int start, end;
-            int check_arr = 0;
+            bool check_arr1 = false;
             if(nums1[a] <= nums2[b]) {
                 int target = nums2[b];
                 int l = a; int r = size1 - 1;
@@ -20,6 +20,7 @@ public:
                     else l = m + 1;  
                 }
                 start = a; end = r;
+                check_arr1 = true;
                 a = r + 1;
             }
             else {
@@ -31,18 +32,17 @@ public:
                     else l = m + 1;  
                 }
                 start = b; end = r;
-                check_arr = 1;
                 b = r + 1;
             }
             int range = end - start + 1;
             if(count + range < median) {
-                if(!check_arr) extra = nums1[end];
+                if(check_arr1) extra = nums1[end];
                 else extra = nums2[end];
                 count += range;
             }
             else {
                 int ptr = median - count - 1;
-                if(!check_arr) {
+                if(check_arr1) {
                     res = nums1[start + ptr];
                     if(ptr) extra = nums1[start + ptr - 1];
                 }
