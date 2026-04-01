@@ -154,4 +154,12 @@ LeedCode problems to master DSA!
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/tashfinsami/LeetCode/tree/master/0074-search-a-2d-matrix) |
+## Linked List
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/tashfinsami/LeetCode/tree/master/0206-reverse-linked-list) |
+## Recursion
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/tashfinsami/LeetCode/tree/master/0206-reverse-linked-list) |
 <!---LeetCode Topics End-->
