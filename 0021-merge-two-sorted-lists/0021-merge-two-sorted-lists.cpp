@@ -25,17 +25,12 @@ public:
             }
             temp = &(*temp)->next;
         }
-        while(list1) {
+        if(list1) {
             *temp = list1; 
-            temp = &(*temp)->next;
-            list1 = list1->next;
         }
-        while(list2) {
+        if(list2) {
             *temp = list2; 
-            temp = &(*temp)->next;
-            list2 = list2->next;
         }
-        if(head) *temp = nullptr;
         return head;
     }
 };
