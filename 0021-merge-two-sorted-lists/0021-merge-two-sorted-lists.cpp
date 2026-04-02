@@ -25,12 +25,8 @@ public:
             }
             temp = &(*temp)->next;
         }
-        if(list1) {
-            *temp = list1; 
-        }
-        if(list2) {
-            *temp = list2; 
-        }
+        if(list1) *temp = list1;
+        if(list2) *temp = list2;
         return head;
     }
 };
