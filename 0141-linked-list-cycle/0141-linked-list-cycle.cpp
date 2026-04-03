@@ -16,7 +16,7 @@ public:
             if(head->next == head) return true;
             else {
                 ListNode* temp = head->next;
-                if(head->next) head->next = head;
+                head->next = head;
                 head = temp;
             }
         }
