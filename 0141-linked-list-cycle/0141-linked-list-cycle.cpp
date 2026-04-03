@@ -13,11 +13,11 @@ class Solution {
 public:
     bool hasCycle(ListNode* head) {
         while(head) {
-            if(head->next && head->next->val == INT_MAX) return true;
+            if(head->next && head->next == head) return true;
             else {
                 ListNode* temp = head->next;
-                head = head->next;
-                if(temp) temp->val = INT_MAX;
+                if(head->next) head->next = head;
+                head = temp;
             }
         }
         return false;
