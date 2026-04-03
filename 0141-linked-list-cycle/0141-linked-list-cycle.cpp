@@ -13,8 +13,7 @@ class Solution {
 public:
     bool hasCycle(ListNode* head) {
         while(head) {
-            if(!head->next) break;
-            else if(head->next->val == INT_MAX) return true;
+            if(head->next && head->next->val == INT_MAX) return true;
             else {
                 ListNode* temp = head->next;
                 head = head->next;
