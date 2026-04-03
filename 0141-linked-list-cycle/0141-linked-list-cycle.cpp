@@ -13,7 +13,7 @@ class Solution {
 public:
     bool hasCycle(ListNode* head) {
         while(head) {
-            if(head->next && head->next == head) return true;
+            if(head->next == head) return true;
             else {
                 ListNode* temp = head->next;
                 if(head->next) head->next = head;
