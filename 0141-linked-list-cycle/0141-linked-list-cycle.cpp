@@ -12,13 +12,13 @@
 class Solution {
 public:
     bool hasCycle(ListNode* head) {
-        if(!head || !head->next) return false;
-        ListNode* slow_ptr = head;
-        ListNode* fast_ptr = head->next;
-        while(fast_ptr && fast_ptr->next) {
-            if(fast_ptr == slow_ptr) return true;
-            slow_ptr = slow_ptr->next;
-            fast_ptr = fast_ptr->next->next;
+        while(head) {
+            if(head->next == head) return true;
+            else {
+                ListNode* temp = head->next;
+                head->next = head;
+                head = temp;
+            }
         }
         return false;
     }
