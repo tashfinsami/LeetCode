@@ -26,7 +26,7 @@ public:
             ptr->next->next = temp;
             ptr = temp;
         }
-        if(ptr = stk.top()) ptr->next = nullptr;
+        if(ptr == stk.top()) ptr->next = nullptr;
         else if(ptr->next == stk.top())ptr->next->next = nullptr;
     }
 };
