@@ -12,15 +12,15 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        n = rem(head, n);
-        return (n == 0) ? head->next : head;
-    }
-private:
-    int rem(ListNode* cur, int n) {
-        if(!cur) return n;
-        n = rem(cur->next, n);
-        n--;
-        if(n == - 1) cur->next = cur->next->next;
-        return n;
+        ListNode* fast = head;
+        ListNode* slow = head;
+        for(int i = 0; i < n; i++) fast = fast->next;
+        if(!fast) return head->next;
+        while(fast->next) {
+            slow = slow->next;
+            fast = fast->next;
+        }
+        slow->next = slow->next->next;
+        return head;
     }
 };
