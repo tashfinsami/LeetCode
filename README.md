@@ -94,6 +94,7 @@ LeedCode problems to master DSA!
 | ------- |
 | [0011-container-with-most-water](https://github.com/tashfinsami/LeetCode/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/tashfinsami/LeetCode/tree/master/0015-3sum) |
+| [0019-remove-nth-node-from-end-of-list](https://github.com/tashfinsami/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0042-trapping-rain-water](https://github.com/tashfinsami/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0125-valid-palindrome](https://github.com/tashfinsami/LeetCode/tree/master/0125-valid-palindrome) |
 | [0141-linked-list-cycle](https://github.com/tashfinsami/LeetCode/tree/master/0141-linked-list-cycle) |
@@ -161,6 +162,7 @@ LeedCode problems to master DSA!
 ## Linked List
 |  |
 | ------- |
+| [0019-remove-nth-node-from-end-of-list](https://github.com/tashfinsami/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0021-merge-two-sorted-lists](https://github.com/tashfinsami/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0141-linked-list-cycle](https://github.com/tashfinsami/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0143-reorder-list](https://github.com/tashfinsami/LeetCode/tree/master/0143-reorder-list) |
