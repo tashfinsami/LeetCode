@@ -2,25 +2,24 @@ class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
         int n = 9;
-        unordered_set<int> row_idx;
-        unordered_set<int> col_idx;
-        unordered_set<int> blk_idx;
+        unordered_map<int, unordered_set<char>> row_idx;
+        unordered_map<int, unordered_set<char>> col_idx;
+        map<pair<int, int>, unordered_set<int>> blk_idx;
+
         for(int row = 0; row < n; row++) {
             for(int col = 0; col < n; col++) {
-                if(board[row][col] == '.') continue;
-                int num = board[row][col] - '0';
+                char ch = board[row][col];
+                if(ch == '.') continue;
                 
-                int row_key = row * 10 + num;
-                int col_key = col * 10 + num;
-                int blk_key = (row / 3) * 100 + (col / 3) * 10 + num;
-                
-                if(row_idx.count(row_key)) return false;
-                if(col_idx.count(col_key)) return false;
-                if(blk_idx.count(blk_key)) return false;
+                pair<int, int> blk = {row / 3, col / 3};
 
-                row_idx.insert(row_key);
-                col_idx.insert(col_key);
-                blk_idx.insert(blk_key);
+                if(row_idx[row].count(ch)) return false;
+                if(col_idx[col].count(ch)) return false;
+                if(blk_idx[blk].count(ch)) return false;
+
+                row_idx[row].insert(ch);
+                col_idx[col].insert(ch);
+                blk_idx[blk].insert(ch);
             }
         }
         return true;
