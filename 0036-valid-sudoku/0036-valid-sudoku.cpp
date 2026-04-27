@@ -12,8 +12,7 @@ public:
                 size_t h1 = hash<char>()(p.first);
                 size_t h2 = hash<int>()(p.second.first);
                 size_t h3 = hash<int>()(p.second.second);
-
-        return h1 ^ (h2 << 1) ^ (h3 << 2);
+                return h1 ^ (h2 << 1) ^ (h3 << 2);
             }
         };
 
