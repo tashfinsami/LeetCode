@@ -2,9 +2,24 @@ class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
         int n = 9;
-        set<pair<char, int>> row_key;
-        set<pair<char, int>> col_key;
-        set<pair<char, pair<int, int>>> blk_key;
+        struct pair_hash {
+            size_t operator()(const pair<char, int>& p) const {
+                return hash<char>()(p.first) ^ (hash<int>()(p.second) << 1);
+            }
+        };
+        struct nested_pair_hash {
+            size_t operator()(const pair<char, pair<int,int>>& p) const {
+                size_t h1 = hash<char>()(p.first);
+                size_t h2 = hash<int>()(p.second.first);
+                size_t h3 = hash<int>()(p.second.second);
+
+        return h1 ^ (h2 << 1) ^ (h3 << 2);
+            }
+        };
+
+        unordered_set<pair<char, int>, pair_hash> row_key;
+        unordered_set<pair<char, int>, pair_hash> col_key;
+        unordered_set<pair<char, pair<int,int>>, nested_pair_hash> blk_key;
         for(int row = 0; row < n; row++) {
             for(int col = 0; col < n; col++) {
                 char ch = board[row][col];
