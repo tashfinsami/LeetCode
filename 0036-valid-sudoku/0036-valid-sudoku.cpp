@@ -1,19 +1,22 @@
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        int n = 9;
-        int idx[3][9][9] = {{0, 0, 0}};
-        for(int row = 0; row < n; row++) {
-            for(int col = 0; col < n; col++) {
+        int row_idx[9] = {0};
+        int col_idx[9] = {0};
+        int blk_idx[9] = {0};
+        for(int row = 0; row < 9; row++) {
+            for(int col = 0; col < 9; col++) {
                 if(board[row][col] == '.') continue;
                 int num = board[row][col] - '0' - 1;
-                if(idx[0][row][num]) return false;
-                if(idx[1][col][num]) return false;
-                if(idx[2][(row / 3) * 3 + (col / 3)][num]) return false;
+                int blk = (row / 3) * 3 + (col / 3);
 
-                idx[0][row][num] = 1;
-                idx[1][col][num] = 1;
-                idx[2][(row / 3) * 3 + (col / 3)][num] = 1;
+                if(row_idx[row] & (1 << num)) return false;
+                if(col_idx[col] & (1 << num)) return false;
+                if(blk_idx[blk] & (1 << num)) return false;
+
+                row_idx[row] = row_idx[row] | (1 << num);
+                col_idx[col] = col_idx[col] | (1 << num);
+                blk_idx[blk] = blk_idx[blk] | (1 << num);
             }
         }
         return true;
