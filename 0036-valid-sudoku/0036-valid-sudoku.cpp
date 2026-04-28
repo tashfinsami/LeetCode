@@ -2,14 +2,7 @@ class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
         int n = 9;
-        int idx[3][9][9];
-        for(int mode = 0; mode < 3; mode++) {
-            for(int row = 0; row < n; row++) {
-                for(int col = 0; col < n; col++) {
-                    idx[mode][row][col] = 0;
-                }
-            }
-        }
+        int idx[3][9][9] = {{0, 0, 0}};
         for(int row = 0; row < n; row++) {
             for(int col = 0; col < n; col++) {
                 if(board[row][col] == '.') continue;
