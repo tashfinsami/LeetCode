@@ -40,8 +40,8 @@ public:
             pool.push_back(newNode);
             temp = temp->next;
         }
-        for(int i = 0; i < cnt; i++) {
-            pool[i]->next = (i == cnt - 1) ? nullptr : pool[i + 1];
+        for(int i = 0; i < pool.size(); i++) {
+            pool[i]->next = (i == pool.size() - 1) ? nullptr : pool[i + 1];
             pool[i]->random = (map_rand[i] == -1) ? nullptr : pool[map_rand[i]];
         }
         return pool[0];
