@@ -11,18 +11,17 @@
  */
 
 class Solution {
+private:
+    void dfs(TreeNode* cur) {
+        swap(cur->left, cur->right);
+        if(cur->left) dfs(cur->left);
+        if(cur->right) dfs(cur->right);
+        return;
+    }
 public:
     TreeNode* invertTree(TreeNode* root) { 
         if(!root) return nullptr;
-        queue<TreeNode*> buffer;
-        buffer.push(root);
-        while(!buffer.empty()) {
-            TreeNode* cur = buffer.front();
-            buffer.pop();
-            swap(cur->left, cur->right);
-            if(cur->left) buffer.push(cur->left);
-            if(cur->right) buffer.push(cur->right);
-        }
+        dfs(root);
         return root;
     }
 };
