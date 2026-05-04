@@ -23,6 +23,8 @@ private:
         int left_diameter = left.second;
         int right_diameter = right.second;
         return {cur_depth, max(cur_diameter, max(left_diameter, right_diameter))};
+        //return {max(left.first, right.first) + 1, 
+        //max(left.first + right.first, max(left.second, right.second))};
     }
 public:
     int diameterOfBinaryTree(TreeNode* root) {
