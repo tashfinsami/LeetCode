@@ -16,9 +16,10 @@ private:
         if(!node) return {0, 0};
         pair<int, int> left = func(node->left);
         pair<int, int> right = func(node->right);
-        int depth = max(left.first + 1, right.first + 1);
-        int diameter = left.first + right.first;
-        return {depth, max(diameter, max(left.second, right.second))};
+        int left_depth = left.first;
+        int right_depth = right.first;
+        int diameter = left_depth + right_depth;
+        return {max(left_depth + 1, right_depth + 1), max(diameter, max(left.second, right.second))};
     }
 public:
     int diameterOfBinaryTree(TreeNode* root) {
