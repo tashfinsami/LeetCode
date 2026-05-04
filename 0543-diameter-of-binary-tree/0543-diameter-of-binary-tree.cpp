@@ -12,28 +12,17 @@
 
 class Solution {
 private:
-    int rdepth(TreeNode* node) {
-        if(!node) return 0;
-        return 1 + max(rdepth(node->left), rdepth(node->right));
-    }
-    int ldepth(TreeNode* node) {
-        if(!node) return 0;
-        return 1 + max(ldepth(node->left), ldepth(node->right));
+    pair<int, int> func(TreeNode* node) {
+        if(!node) return {0, 0};
+        pair<int, int> left = func(node->left);
+        pair<int, int> right = func(node->right);
+        int depth = max(left.first + 1, right.first + 1);
+        int diameter = left.first + right.first;
+        return {depth, max(diameter, max(left.second, right.second))};
     }
 public:
     int diameterOfBinaryTree(TreeNode* root) {
-        queue<TreeNode*> buffer;
-        buffer.push(root);
-        int diameter = 0;
-        while(!buffer.empty()) {
-            TreeNode* cur = buffer.front();
-            buffer.pop();
-            int lcount = ldepth(cur->left);
-            int rcount = rdepth(cur->right);
-            diameter = max(diameter, lcount + rcount);
-            if(cur->left) buffer.push(cur->left);
-            if(cur->right) buffer.push(cur->right);
-        }
-        return diameter;
+        pair<int, int> res = func(root);
+        return res.second;
     }
 };
