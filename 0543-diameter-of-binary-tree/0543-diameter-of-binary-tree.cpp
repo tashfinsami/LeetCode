@@ -18,8 +18,11 @@ private:
         pair<int, int> right = func(node->right);
         int left_depth = left.first;
         int right_depth = right.first;
-        int diameter = left_depth + right_depth;
-        return {max(left_depth + 1, right_depth + 1), max(diameter, max(left.second, right.second))};
+        int cur_diameter = left_depth + right_depth;
+        int left_diameter = left.second;
+        int right_diameter = right.second;
+        return {max(left_depth + 1, right_depth + 1), 
+            max(cur_diameter, max(left_diameter, right_diameter))};
     }
 public:
     int diameterOfBinaryTree(TreeNode* root) {
