@@ -18,7 +18,7 @@ private:
         pair<int, int> right = func(node->right);
         int left_depth = left.first;
         int right_depth = right.first;
-        int cur_depth = max(left_depth + 1, right_depth + 1);
+        int cur_depth = max(left_depth, right_depth) + 1;
         int cur_diameter = left_depth + right_depth;
         int left_diameter = left.second;
         int right_diameter = right.second;
