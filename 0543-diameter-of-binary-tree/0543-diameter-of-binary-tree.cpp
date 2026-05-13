@@ -11,24 +11,27 @@
  */
 
 class Solution {
-private:
-    pair<int, int> func(TreeNode* node) {
-        if(!node) return {0, 0};
-        pair<int, int> left = func(node->left);
-        pair<int, int> right = func(node->right);
-        int left_depth = left.first;
-        int right_depth = right.first;
-        int cur_depth = max(left_depth, right_depth) + 1;
-        int cur_diameter = left_depth + right_depth;
-        int left_diameter = left.second;
-        int right_diameter = right.second;
-        return {cur_depth, max(cur_diameter, max(left_diameter, right_diameter))};
-        /*return {max(left.first, right.first) + 1, 
-        max(left.first + right.first, max(left.second, right.second))};*/
-    }
 public:
     int diameterOfBinaryTree(TreeNode* root) {
-        pair<int, int> res = func(root);
-        return res.second;
+        unordered_map<TreeNode*, pair<int, int>> idx;
+        stack<TreeNode*> buffer;
+        idx[nullptr] = {0, 0};
+        if(root) buffer.push(root);
+        while(!buffer.empty()) {
+            TreeNode* node = buffer.top();
+            if(node->left && !idx.count(node->left)) buffer.push(node->left);
+            else if(node->right && !idx.count(node->right)) buffer.push(node->right);
+            else {
+                TreeNode* cur_node = buffer.top();
+                buffer.pop();
+                auto [l_depth, l_diameter] = idx[cur_node->left];
+                auto [r_depth, r_diameter] = idx[cur_node->right];
+                int cur_depth = max(l_depth, r_depth) + 1;
+                int cur_diameter = l_depth + r_depth;
+                int max_diameter = max(cur_diameter, max(l_diameter, r_diameter));
+                idx[cur_node] = {cur_depth, max_diameter};
+            }
+        }
+        return idx[root].second;
     }
 };
